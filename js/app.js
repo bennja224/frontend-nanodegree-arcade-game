@@ -48,6 +48,8 @@ var Player = function(x, y, speed) {
 	this.sprite = 'images/char-princess-girl.png';
 };
 
+var player = new Player(); //Player Position
+
 Player.prototype.update = function(dt) {
 	this.x += this.speed * dt;
 
@@ -62,10 +64,10 @@ Player.prototype.render = function() {
 	ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
-Player.prototype.reset = function() {
-	this.x = 200;
-	this.y = 400;
-}
+//Player.prototype.reset = function() {
+	//this.x = 200;
+	//this.y = 400;
+//}
 
 Player.prototype.handleInput = function(keyPress) {
 	if (keyPress == 'left') {
